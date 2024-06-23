@@ -1,9 +1,9 @@
 import React from 'react';
-const TimetableOutput = ({ timetableData }) => {
-  if (!timetableData) return <div>No timetable data available</div>;
+const TimetableOutput = ({ Timetable }) => {
+  if (!Timetable) return <div>No timetable data available</div>;
   return (
     <div>
-      <h2>Timetable for {timetableData.name}</h2>
+      <h2>Timetable for {Timetable.name}</h2>
       <table>
         <thead>
           <tr>
@@ -13,7 +13,7 @@ const TimetableOutput = ({ timetableData }) => {
           </tr>
         </thead>
         <tbody>
-          {timetableData.map((row, index) => (
+          {Timetable.map((row, index) => (
             <tr key={index}>
               <td>{row.day}</td>
               <td>{row.time}</td>
