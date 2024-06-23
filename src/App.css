@@ -1,5 +1,5 @@
 body {
-  font-family: "Roboto Slab", chivo;
+  font-family: "Roboto Slab", exo;
   line-height: 1.6;
   background-color: #90c2e7;
   margin: 0;
@@ -54,7 +54,7 @@ footer {
   margin-top: 2rem;
   margin-bottom: 2rem;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(237, 227, 228);
+  box-shadow: 0 0 8px rgba(237, 227, 228);
   align-items: left;
 }
 

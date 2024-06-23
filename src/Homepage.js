@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 export default function Homepage() {
   return (
-    <div className="container header mt-4 text-center">
+    <div className="container header mt-3 text-left">
       <p className="para">
         Welcome to our personalized timetable generator! 
         <br />
