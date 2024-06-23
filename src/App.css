@@ -39,13 +39,13 @@ body {
 }
 
 footer {
-  color: af9fa5;
+  color: #90c2e7;
   text-align: center;
   padding: 1rem;
 
   bottom: 0;
   width: 100%;
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .container {
@@ -53,7 +53,7 @@ footer {
   padding: 2rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  border-radius: 8px;
+  border-radius: 5px;
   box-shadow: 0 0 10px rgba(237, 227, 228);
   align-items: left;
 }
@@ -67,7 +67,7 @@ footer {
 }
 
 .form-group input {
-  width: 100%;
+  width: 56%;
   padding: 0.5rem;
   margin-top: 0.5rem;
   border: 1px solid #ede3e4;
