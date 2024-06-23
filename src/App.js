@@ -9,7 +9,7 @@ function App() {
     <Router>
       <Navbar />
       <Switch>
-        <Route exact path="/" component={Homepage} />
+        <Route path="/" component={Homepage} />
         <Route path="/timetable" component={Timetable} />
       </Switch>
     </Router>

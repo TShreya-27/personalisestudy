@@ -13,12 +13,12 @@ export default function Navbar() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/Homepage.js" style={{ color: "#FEFEFA" }}>
+              <Link className="nav-link active" aria-current="page" to="/Homepage" style={{ color: "#FEFEFA" }}>
                 <span className="material-icons">home</span>
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" to="/Timetable.js" style={{ color: "#FEFEFA" }}>
+              <Link className="nav-link active" to="/Timetable" style={{ color: "#FEFEFA" }}>
                 <span className="material-icons">schedule</span>
               </Link>
             </li>
