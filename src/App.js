@@ -1,18 +1,25 @@
-import "./App.css";
 import React from "react";
-import Navbar from "./Navbar.js";
-import Homepage from "./Homepage.js";
-import Footer from "./Footer.js";
-import Timetable from "./Timetable.js";
-// import { Link } from "react-router-dom";
-export default function App() {
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
+import Homepage from "./Homepage";
+import Timetable from "./Timetable";
+
+function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Homepage />
-      <Footer />
-      <Timetable />
-      <Outputpage />
-    </div>
+    <Router>
+      <div>
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={Homepage} />
+          <Route path="/Homepage" component={Homepage} />
+          <Route path="/Timetable" component={Timetable} />
+        </Switch>
+        <Footer />
+      </div>
+    </Router>
   );
 }
+
+export default App;
+
