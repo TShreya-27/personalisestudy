@@ -1,6 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route} from "react-router-dom";
-import { Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Navbar from "./Navbar";
 import Homepage from "./Homepage";
 import Timetable from "./Timetable";
@@ -9,10 +8,10 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <Switch>
+      <Routes>
         <Route path="/" component={Homepage} />
         <Route path="/timetable" component={Timetable} />
-      </Switch>
+      </Routes>
     </Router>
   );
 }
