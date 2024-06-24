@@ -8,7 +8,7 @@ export default function Navbar() {
   return (
     <nav
       className="navbar navbar-expand-lg"
-      style={{ backgroundColor: "#90c2e7" }}
+      style={{ backgroundColor: "light sky blue" }}
     >
       <div className="container-fluid">
         <Link className="navbar-brand" to={Homepage}>
