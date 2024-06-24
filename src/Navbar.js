@@ -8,11 +8,11 @@ export default function Navbar() {
   return (
     <nav
       className="navbar navbar-expand-lg"
-      style={{ backgroundColor: "RoseQuartz" }}
+      style={{ backgroundColor: "black" }}
     >
       <div className="container-fluid">
         <Link className="navbar-brand" to={Homepage}>
-          <img src={logo} alt="Time-Table Icon" width="200" height="80" />
+          <img src={logo} alt="Time-Table Icon" width="150" height="60" />
         </Link>
         <button
           className="navbar-toggler"
@@ -22,7 +22,7 @@ export default function Navbar() {
           aria-controls="navbarNav"
           aria-expanded="false"
           aria-label="Toggle navigation"
-          style={{ color: "magnolia" }}
+          style={{ color: "white" }}
         >
           <span className="navbar-toggler-icon" />
         </button>
@@ -33,7 +33,7 @@ export default function Navbar() {
                 className="nav-link active"
                 aria-current="page"
                 to={Homepage}
-                style={{ color: "magnolia" }}
+                style={{ color: "white" }}
               >
                 Home
               </Link>
@@ -42,9 +42,9 @@ export default function Navbar() {
               <Link
                 to={Timetable}
                 className="nav-link active"
-                style={{ color: "Magnolia" }}
+                style={{ color: "white" }}
               >
-                Generate
+                Generate Time-Table
               </Link>
             </li>
           </ul>

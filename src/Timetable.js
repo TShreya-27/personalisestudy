@@ -119,7 +119,7 @@ export default function Timetable() {
           </div>
           <div className="d-grid gap-2">
             <button type="submit" className="btn btn-primary">
-              Generate 
+              Generate Timetable
             </button>
           </div>
         </form>
