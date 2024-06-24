@@ -9,8 +9,8 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" component={Homepage} />
-        <Route path="/timetable" component={Timetable} />
+         <Route path="/Homepage" element={<Homepage />} />
+        <Route path="/Timetable" element={<Timetable />} />
       </Routes>
     </Router>
   );
