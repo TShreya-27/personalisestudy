@@ -13,7 +13,7 @@ body {
 }
 
 .navbar-brand img {
-  max-width: 56%;
+  max-width: 78%;
   height: auto;
 }
 
@@ -34,12 +34,12 @@ body {
 }
 
 .header p {
-  font-size: 2.5rem;
+  font-size: 1.7rem;
   color: #e7dfe8;
 }
 
 footer {
-  color: #90c2e7;
+  color: #e7dfe8;
   text-align: center;
   padding: 1rem;
 
