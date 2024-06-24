@@ -44,7 +44,7 @@ export default function Navbar() {
                 className="nav-link active"
                 style={{ color: "Magnolia" }}
               >
-                Generate Time-Table
+                Generate
               </Link>
             </li>
           </ul>

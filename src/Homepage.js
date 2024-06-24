@@ -1,6 +1,5 @@
 import React from "react";
 import "./App.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
 export default function Homepage() {
   return (
     <div className="container header mt-3 text-left">
