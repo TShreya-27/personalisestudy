@@ -8,7 +8,7 @@ export default function Navbar() {
   return (
     <nav
       className="navbar navbar-expand-lg"
-      style={{ backgroundColor: "black" }}
+      style={{ backgroundColor: "#90c2e7" }}
     >
       <div className="container-fluid">
         <Link className="navbar-brand" to={Homepage}>
@@ -44,7 +44,7 @@ export default function Navbar() {
                 className="nav-link active"
                 style={{ color: "white" }}
               >
-                Generate Time-Table
+                Generate
               </Link>
             </li>
           </ul>
