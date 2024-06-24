@@ -1,6 +1,6 @@
 import React from 'react';
-const TimetableOutput = ({ Timetable }) => {
-  if (!Timetable) return <div>No timetable data available</div>;
+const TimetableOutput = ({ timetableData }) => {
+  if (!imetable) return <div>No timetable data available</div>;
   return (
     <div>
       <h2>Timetable for {Timetable.name}</h2>
