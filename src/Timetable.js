@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import "./App.css";
 import Navbar from "./Navbar.js";
 import Footer from "./Footer.js";
+
 export default function Timetable() {
   const [daysPerWeek, setDaysPerWeek] = useState(0);
   const [subjects, setSubjects] = useState([{ subject: "", credits: 0 }]);
   const [studyHoursPerDay, setStudyHoursPerDay] = useState(0);
   const [breakInterval, setBreakInterval] = useState(0);
   const [breakDuration, setBreakDuration] = useState(0);
+  const [name, setName] = useState(""); // new state variable for name
 
   const addSubject = () => {
     setSubjects([...subjects, { subject: "", credits: 0 }]);
@@ -26,6 +28,16 @@ export default function Timetable() {
           Personalized Timetable Generator
         </h1>
         <form id="timetableForm" onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              value={name}
+              onChange={(event) => setName(event.target.value)}
+              required
+            />
+          </div>
           <div className="form-group">
             <label htmlFor="daysPerWeek">Number of days per week:</label>
             <input
@@ -50,7 +62,7 @@ export default function Timetable() {
                     setSubjects(
                       subjects.map((s, i) =>
                         i === index
-                          ? { subject: event.target.value, credits: s.credits }
+                         ? { subject: event.target.value, credits: s.credits }
                           : s
                       )
                     )
@@ -66,7 +78,7 @@ export default function Timetable() {
                     setSubjects(
                       subjects.map((s, i) =>
                         i === index
-                          ? { subject: s.subject, credits: event.target.value }
+                         ? { subject: s.subject, credits: event.target.value }
                           : s
                       )
                     )
