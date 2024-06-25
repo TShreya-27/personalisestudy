@@ -34,7 +34,7 @@ body {
 }
 
 .header p {
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   color: #e7dfe8;
 }
 
@@ -54,7 +54,6 @@ footer {
   margin-top: 2rem;
   margin-bottom: 2rem;
   border-radius: 5px;
-  box-shadow: 0 0 8px rgba(237, 227, 228);
   align-items: left;
 }
 
