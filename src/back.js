@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import InputForm from './InputForm';
+import InputForm from './index';
 import Timetable from './Timetable';
 import axios from 'axios';
 
