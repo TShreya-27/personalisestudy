@@ -1,55 +1,65 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "./logo.png";
-import "./App.css";
 import Homepage from "./Homepage";
 import Timetable from "./Timetable";
-import { Link } from "react-router-dom";
+import "./App.css";
+
 export default function Navbar() {
+  const [activeComponent, setActiveComponent] = useState("home");
+
+  const renderComponent = () => {
+    switch (activeComponent) {
+      case "home":
+        return <Homepage />;
+      case "timetable":
+        return <Timetable />;
+      default:
+        return <Homepage />;
+    }
+  };
+
   return (
-    <nav
-      className="navbar navbar-expand-lg"
-      style={{ backgroundColor: "light sky blue" }}
-    >
-      <div className="container-fluid">
-        <Link className="navbar-brand" to={Homepage}>
-          <img src={logo} alt="Time-Table Icon" width="150" height="60" />
-        </Link>
+    <div>
+      <nav className="navbar navbar-expand-lg navbar-light bg-dark">
+        <button
+          className="navbar-brand btn"
+          onClick={() => setActiveComponent("home")}
+        >
+          <img src={logo} alt="Time-Table logo" className="logo" />
+        </button>
         <button
           className="navbar-toggler"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
+          data-toggle="collapse"
+          data-target="#navbarNav"
           aria-controls="navbarNav"
           aria-expanded="false"
           aria-label="Toggle navigation"
-          style={{ color: "white" }}
         >
-          <span className="navbar-toggler-icon" />
+          <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
-            <li className="nav-item">
-              <Link
-                className="nav-link active"
-                aria-current="page"
-                to={Homepage}
-                style={{ color: "white" }}
+            <li className="nav-item active">
+              <button
+                className="nav-link btn"
+                onClick={() => setActiveComponent("home")}
               >
                 Home
-              </Link>
+              </button>
             </li>
             <li className="nav-item">
-              <Link
-                to={Timetable}
-                className="nav-link active"
-                style={{ color: "white" }}
+              <button
+                className="nav-link btn"
+                onClick={() => setActiveComponent("timetable")}
               >
-                Generate
-              </Link>
+                Generate Time-Table
+              </button>
             </li>
           </ul>
         </div>
-      </div>
-    </nav>
+      </nav>
+      <div>{renderComponent()}</div>
+    </div>
   );
 }

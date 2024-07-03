@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import "./App.css";
-import Navbar from "./Navbar.js";
-import Footer from "./Footer.js";
 
 export default function Timetable() {
   const [daysPerWeek, setDaysPerWeek] = useState(0);
@@ -22,7 +20,6 @@ export default function Timetable() {
 
   return (
     <div>
-      <Navbar />
       <div className="container mb-3">
         <h1 className="text-center fw-bold">
           Personalized Timetable Generator
@@ -62,7 +59,7 @@ export default function Timetable() {
                     setSubjects(
                       subjects.map((s, i) =>
                         i === index
-                         ? { subject: event.target.value, credits: s.credits }
+                          ? { subject: event.target.value, credits: s.credits }
                           : s
                       )
                     )
@@ -78,7 +75,7 @@ export default function Timetable() {
                     setSubjects(
                       subjects.map((s, i) =>
                         i === index
-                         ? { subject: s.subject, credits: event.target.value }
+                          ? { subject: s.subject, credits: event.target.value }
                           : s
                       )
                     )
@@ -130,13 +127,16 @@ export default function Timetable() {
             />
           </div>
           <div className="d-grid gap-2">
-            <button type="submit" className="btn btn-primary">
+            <button
+              type="submit"
+              className="btn btn-primary"
+              href="Outputpage.js"
+            >
               Generate Timetable
             </button>
           </div>
         </form>
       </div>
-      <Footer />
     </div>
   );
 }
