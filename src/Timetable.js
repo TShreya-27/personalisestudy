@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import "./App.css";
 
-export default function Timetable() {
+export default function Timetable({ setActiveComponent }) {
   const [daysPerWeek, setDaysPerWeek] = useState(0);
   const [subjects, setSubjects] = useState([{ subject: "", credits: 0 }]);
   const [studyHoursPerDay, setStudyHoursPerDay] = useState(0);
   const [breakInterval, setBreakInterval] = useState(0);
   const [breakDuration, setBreakDuration] = useState(0);
-  const [name, setName] = useState(""); // new state variable for name
+  const [name, setName] = useState("");
 
   const addSubject = () => {
     setSubjects([...subjects, { subject: "", credits: 0 }]);
@@ -15,6 +15,7 @@ export default function Timetable() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    setActiveComponent("output");
     // Call API or perform calculation to generate timetable
   };
 
@@ -127,11 +128,7 @@ export default function Timetable() {
             />
           </div>
           <div className="d-grid gap-2">
-            <button
-              type="submit"
-              className="btn btn-primary"
-              href="Outputpage.js"
-            >
+            <button type="submit" className="btn btn-primary">
               Generate Timetable
             </button>
           </div>
