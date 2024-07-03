@@ -1,16 +1,14 @@
 import React from "react";
 import logo from "./logo.png";
+import { Link } from "react-router-dom";
 import "./App.css";
 
-export default function Navbar({ setActiveComponent }) {
+export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-dark">
-      <button
-        className="navbar-brand btn"
-        onClick={() => setActiveComponent("home")}
-      >
+      <Link className="navbar-brand" to="/">
         <img src={logo} alt="Time-Table logo" className="logo" />
-      </button>
+      </Link>
       <button
         className="navbar-toggler"
         type="button"
@@ -25,20 +23,14 @@ export default function Navbar({ setActiveComponent }) {
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav">
           <li className="nav-item active">
-            <button
-              className="nav-link btn"
-              onClick={() => setActiveComponent("home")}
-            >
+            <Link className="nav-link" to="/">
               Home
-            </button>
+            </Link>
           </li>
           <li className="nav-item">
-            <button
-              className="nav-link btn"
-              onClick={() => setActiveComponent("timetable")}
-            >
+            <Link className="nav-link" to="/timetable">
               Generate Time-Table
-            </button>
+            </Link>
           </li>
         </ul>
       </div>

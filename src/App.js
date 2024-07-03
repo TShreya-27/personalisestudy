@@ -1,32 +1,24 @@
-import React, { useState } from "react";
 import "./App.css";
-import Navbar from "./Navbar.js";
-import Homepage from "./Homepage.js";
-import Timetable from "./Timetable.js";
-import Outputpage from "./Outputpage.js";
-import Footer from "./Footer.js";
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Navbar from "./Navbar";
+import Homepage from "./Homepage";
+import Timetable from "./Timetable";
+import TimetableOutput from "./Outputpage";
+import Footer from "./Footer";
 
 export default function App() {
-  const [activeComponent, setActiveComponent] = useState("home");
-
-  const renderComponent = () => {
-    switch (activeComponent) {
-      case "home":
-        return <Homepage />;
-      case "timetable":
-        return <Timetable setActiveComponent={setActiveComponent} />;
-      case "output":
-        return <Outputpage />;
-      default:
-        return <Homepage />;
-    }
-  };
-
   return (
-    <div className="App">
-      <Navbar setActiveComponent={setActiveComponent} />
-      {renderComponent()}
-      <Footer />
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/timetable" element={<Timetable />} />
+          <Route path="/output" element={<TimetableOutput />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }

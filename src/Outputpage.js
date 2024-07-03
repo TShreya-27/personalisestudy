@@ -1,7 +1,10 @@
-import React from 'react';
-import { timetableData } from './Timetable';
+import React from "react";
+import { useLocation } from "react-router-dom";
 
 const TimetableOutput = () => {
+  const location = useLocation();
+  const timetableData = location.state;
+
   if (!timetableData) return <div>No timetable data available</div>;
 
   return (
@@ -16,11 +19,11 @@ const TimetableOutput = () => {
           </tr>
         </thead>
         <tbody>
-          {timetableData.timetable.map((row, index) => (
+          {timetableData.subjects.map((subject, index) => (
             <tr key={index}>
-              <td>{row.day}</td>
-              <td>{row.time}</td>
-              <td>{row.class}</td>
+              <td>{subject.day}</td>
+              <td>{subject.time}</td>
+              <td>{subject.class}</td>
             </tr>
           ))}
         </tbody>
