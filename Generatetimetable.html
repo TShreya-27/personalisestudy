@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style1.css" />
+    <title>Personalized Time Table Generator</title>
+</head>
+    <body>
+        <div class="banner">
+        <div class="navbar">
+            <ul>
+                <li><a href="index.html">Back</a></li></li>
+            </ul>
+
+        </div>
+        </div>
+        <div class="generatetimetable ">
+          <h1>Generate Timetable</h1>
+          <br/>
+          <form id="timetableForm">
+            <div class="form-group">
+              <label for="daysPerWeek">Number of days per week:</label>
+              <input
+                type="number"
+                id="daysPerWeek"
+                min="1"
+                max="7"
+                required
+              />
+            </div>
+            <br/>
+            <div class="form-group" id="subjectsContainer">
+              <label for="">Subjects and their credit hours:</label>
+              <input type="text" id="">
+               <input
+              type="number"
+              id=""
+              min="1"
+              max="24"
+              required
+            />
+            </div>
+            <br/>
+            <div class="d-grid gap-2">
+              <button type="button"  class="add-subject">
+               <span></span> Add Another Subject
+              </button>
+            </div>
+            <br/>
+            <div class="form-group">
+              <label for="studyHoursPerDay">Study hours per day:</label>
+              <input
+                type="number"
+                id="studyHoursPerDay"
+                min="1"
+                max="24"
+                required
+              />
+            </div>
+            <br/>
+            <div class="form-group">
+              <label for="breakInterval">Break intervals (in hours):</label>
+              <input
+                type="number"
+                id="breakInterval"
+                min="1"
+                required
+              />
+            </div>
+            <br/>
+            <div class="form-group">
+              <label for="breakDuration">Break duration (in minutes):</label>
+              <input
+                type="number"
+                id="breakDuration"
+                min="1"
+                required
+              />
+            </div>
+            <br/>
+            <div class="d-grid gap-2">
+              <button type="submit" class="btn btn-primary">
+               <span></span> Generate Timetable
+              </button>
+            </div>
+          </form>
+          <div class="footer">
+            <p> This page was coded by
+       <a href="https://github.com/smritisinha0801">Smriti Sinha</a>
+       <a href="https://github.com/Shivika2934">Shivika Mittal</a> 
+       <a href="https://github.com/TShreya-27">Shreya Tiwari</a> and is
+       open-sourced on
+       <a href="https://github.com/Shivika2934/time-table">Github</a>
+         </div>
+        </div>
+        </div>
+      </body>
+    </html>
