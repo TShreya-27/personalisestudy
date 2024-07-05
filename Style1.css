@@ -1,0 +1,219 @@
+*{
+
+    margin:  0;
+
+    padding: 0;
+
+    font-family: sans-serif ;
+
+    box-sizing: border-box;
+
+}
+
+.banner{
+
+    width: 100;
+
+    height: 100vh;
+
+    background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(background.jpg) no-repeat;
+
+    background-size: cover;
+
+    background-position: center;
+
+  }
+
+  .navbar {
+
+    width: 85%;
+
+    margin: auto;
+
+    padding: 35px 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+  }
+
+  .navbar ul li {
+
+    list-style: none;
+
+    display: inline-block;
+
+    margin: 0 20px;
+
+    position: relative;
+
+  }
+
+  
+
+  .navbar ul li a {
+
+    text-decoration: none;
+
+    color: #fff;
+
+    text-transform: uppercase;
+
+  }
+
+  
+
+  .navbar ul li::after {
+
+    content: '';
+
+    height: 3px;
+
+    width: 0;
+
+    background: #009688;
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -10px;
+
+    transition: 0.5s;
+
+  }
+
+  
+
+  .navbar ul li:hover::after {
+
+    width: 100%;
+
+  }
+
+  .generatetimetable{
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform:translate(-50%,-50%);
+
+    text-align: center;
+
+    color: #fff;
+
+    border-radius: 60px;
+
+    box-shadow: 0 20px 20px rgba(0,0,0,0.95);
+
+  }
+
+  .generatetimetable h1{
+
+    font-size: 60px;
+
+    margin-top: 70px;
+
+  }
+
+  .form-group{
+
+    font-size: 20px;
+
+    margin-top: 10px;
+
+  }
+
+  button{
+
+    width: 150px;
+
+    padding: 15px 0;
+
+    text-align: center;
+
+    margin: 20px 10px;
+
+    border-radius: 25px;
+
+    font-weight: bold;
+
+    border: 2px solid #009688;
+
+    background: transparent;
+
+    color: #fff;
+
+    cursor: pointer;
+
+    position: relative;
+
+    overflow: hidden;
+
+  }
+
+  span{
+
+    background: #009688;
+
+    height: 100%;
+
+    width: 0;
+
+    border-radius: 25px;
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    z-index: -1;
+
+    transition: 0.5s;
+
+  }
+
+  button:hover span{
+
+    width: 100%;
+
+  }
+
+  button:hover{
+
+    border: none;
+
+  }
+
+  .footer {
+
+    color: #f0eff0;
+
+    text-align: bottom;
+
+    padding: 1rem;
+
+    bottom: 0;
+
+    width: 100%;
+
+    font-size: 10px;
+
+  }
+
+  .footer a {
+
+    text-decoration: underline;
+
+    color: #09659a;
+
+    font-size: 15px;
+
+  }
