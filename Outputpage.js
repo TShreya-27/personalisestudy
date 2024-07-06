@@ -1,11 +1,7 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
 import './Timetable.css';
 
-const Timetable = () => {
-  const location = useLocation();
-  const { timetable } = location.state || { timetable: [] };
-
+const Timetable = ({ timetable }) => {
   return (
     <div className="container">
       <h3>Your Timetable</h3>
