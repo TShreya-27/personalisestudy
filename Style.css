@@ -8,7 +8,8 @@
 .banner {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(background.jpg) no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url(background.jpg) no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -37,11 +38,12 @@
 .navbar ul li a {
   text-decoration: none;
   color: #fff;
-  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: bolder;
 }
 
 .navbar ul li::after {
-  content: '';
+  content: "";
   height: 3px;
   width: 0;
   background: #009688;
@@ -109,18 +111,100 @@ button:hover span {
 button:hover {
   border: none;
 }
-
 .footer {
-  color: #f0eff0;
-  text-align: bottom;
-  padding: 1rem;
-  bottom: 0;
-  width: 100%;
-  font-size: 10px;
+  margin-top: 20px;
+}
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
 }
 
+.banner {
+  padding: 20px;
+}
+.heading {
+  margin-bottom: 20px;
+}
+.para {
+  margin-bottom: 20px;
+}
+.footer {
+  margin-top: 10px;
+  font-size: 12px;
+}
+.intro {
+  margin: 10px 10px 10px 10px;
+}
 .footer a {
-  text-decoration: underline;
-  color: #09659a;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+* {
+  margin: 0;
+
+  padding: 0;
+
+  font-family: sans-serif;
+
+  box-sizing: border-box;
+}
+
+.generatetimetable {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  border-radius: 60px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.95);
+}
+
+.generatetimetable h1 {
+  font-size: 60px;
+  margin-top: 70px;
+}
+
+.form-group {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+button {
+  width: 150px;
+  padding: 15px 0;
+  text-align: center;
+  margin: 20px 10px;
+  border-radius: 25px;
+  font-weight: bold;
+  border: 2px solid #009688;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.form-group label {
   font-size: 15px;
+}
+span {
+  background: #009688;
+  height: 100%;
+  width: 0;
+  border-radius: 25px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+button:hover span {
+  width: 100%;
+}
+
+button:hover {
+  border: none;
 }
