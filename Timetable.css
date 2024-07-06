@@ -1,0 +1,23 @@
+.container {
+  margin-top: 20px;
+}
+
+.timetable-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.table {
+  width: 80%;
+  margin-top: 20px;
+}
+
+th, td {
+  text-align: center;
+  padding: 10px;
+}
+
+thead {
+  background-color: #f2f2f2;
+}
