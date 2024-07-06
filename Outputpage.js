@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import './Timetable.css'; // You can style your timetable using this CSS file
+import './Timetable.css';
 
 const Timetable = () => {
   const location = useLocation();
