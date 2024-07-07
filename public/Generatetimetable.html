@@ -25,12 +25,14 @@
           <br />
           <div class="form-group" id="subjectsContainer">
             <label for="">Subjects and their required hours:</label>
-            <input type="text" id="" />
-            <input type="number" id="" min="1" max="24" required />
+            <div class="subject-input">
+              <input type="text" class="subjectName" />
+              <input type="number" class="subjectHour" min="1" max="24" required />
+            </div>
           </div>
           <br />
           <div class="d-grid gap-2">
-            <button type="button" class="add-subject">
+            <button type="button" class="add-subject" onclick="addSubject()">
               Add Another Subject
             </button>
           </div>
@@ -57,7 +59,7 @@
           </div>
           <br />
           <div class="d-grid gap-2">
-            <button type="submit" class="btn btn-primary">
+            <button type="submit" id="generate" class="btn btn-primary">
               Generate Timetable
             </button>
           </div>
@@ -74,5 +76,18 @@
         </div>
       </div>
     </div>
+    <script>
+      function addSubject() {
+        const container = document.getElementById('subjectsContainer');
+        const div = document.createElement('div');
+        div.className = 'subject-input';
+        div.innerHTML = `
+          <input type="text" class="subjectName" />
+          <input type="number" class="subjectHour" min="1" max="24" required />
+        `;
+        container.appendChild(div);
+      }
+    </script>
+    <script src="Outputpage.js"></script>
   </body>
 </html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="logo.png" />
+    <title>Generated Timetable</title>
+  </head>
+  <body>
+    <div class="banner">
+      <div class="container">
+        <div class="navbar">
+          <ul>
+            <li><a href="index.html">Back</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="generatetimetable">
+        <h1><i>Generated Timetable</i></h1>
+        <div id="timetableContainer"></div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Retrieve the timetable from local storage
+        let timetable = JSON.parse(localStorage.getItem("timetable"));
+        displayTimetable(timetable);
+      });
+
+      function displayTimetable(timetable) {
+        let container = document.getElementById("timetableContainer");
+        container.innerHTML = `<h2>Generated Timetable</h2>`;
+
+        let table = document.createElement("table");
+        table.className = "timetable";
+        let thead = document.createElement("thead");
+        let tbody = document.createElement("tbody");
+
+        // Create table headers
+        thead.innerHTML = `
+        <tr>
+          <th>Day</th>
+          <th>Subject</th>
+          <th>Start Time</th>
+          <th>End Time</th>
+        </tr>
+      `;
+        table.appendChild(thead);
+
+        for (let day in timetable) {
+          let schedule = timetable[day];
+
+          schedule.forEach((session) => {
+            let row = document.createElement("tr");
+            row.innerHTML = `
+            <td>${day}</td>
+            <td>${session["subject"]}</td>
+            <td>${session["start_time"]}</td>
+            <td>${session["end_time"]}</td>
+          `;
+            tbody.appendChild(row);
+          });
+        }
+
+        table.appendChild(tbody);
+        container.appendChild(table);
+      }
+    </script>
+  </body>
+</html>

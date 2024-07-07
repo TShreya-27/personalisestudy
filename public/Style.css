@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-.banner {
+body {
   width: 100%;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
@@ -143,11 +143,8 @@ button:hover {
 }
 * {
   margin: 0;
-
   padding: 0;
-
   font-family: sans-serif;
-
   box-sizing: border-box;
 }
 
@@ -207,4 +204,35 @@ button:hover span {
 
 button:hover {
   border: none;
+}
+
+table.timetable {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  table-layout: fixed;
+}
+
+table.timetable,
+table.timetable th,
+table.timetable td {
+  border: 1px solid #ddd;
+}
+
+table.timetable th,
+table.timetable td {
+  padding: 8px;
+  text-align: left;
+}
+
+table.timetable th {
+  background-color: #f2f2f2;
+}
+
+table.timetable tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table.timetable tr:hover {
+  background-color: #ddd;
 }
