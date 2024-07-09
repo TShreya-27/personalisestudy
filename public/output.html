@@ -14,10 +14,14 @@
           </ul>
         </div>
       </div>
-      <div class="generatetimetable">
-        <h1><i>Generated Timetable</i></h1>
-        <div id="timetableContainer"></div>
-      </div>
+    </div>
+    <div class="tt">
+      <h1><i>Generated Timetable</i></h1>
+      <div
+        id="timetableContainer"
+        class="scrollable"
+        style="overflow: auto"
+      ></div>
     </div>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
@@ -28,8 +32,6 @@
 
       function displayTimetable(timetable) {
         let container = document.getElementById("timetableContainer");
-        container.innerHTML = `<h2>Generated Timetable</h2>`;
-
         let table = document.createElement("table");
         table.className = "timetable";
         let thead = document.createElement("thead");
@@ -52,10 +54,10 @@
           schedule.forEach((session) => {
             let row = document.createElement("tr");
             row.innerHTML = `
-            <td>${day}</td>
-            <td>${session["subject"]}</td>
-            <td>${session["start_time"]}</td>
-            <td>${session["end_time"]}</td>
+            <td data-label="Day">${day}</td>
+            <td data-label="Subject">${session["subject"]}</td>
+            <td data-label="Start Time">${session["start_time"]}</td>
+            <td data-label="End Time">${session["end_time"]}</td>
           `;
             tbody.appendChild(row);
           });

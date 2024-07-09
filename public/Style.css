@@ -9,7 +9,7 @@ body {
   width: 100%;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-    url(background.jpg) no-repeat;
+    url(background.jpg) repeat;
   background-size: cover;
   background-position: center;
 }
@@ -68,9 +68,13 @@ body {
 
 .content h1 {
   font-size: 60px;
-  margin-top: 70px;
+  margin-top: 50px;
 }
-
+h1 {
+  font-size: 60px;
+  color: white;
+  text-align: center;
+}
 .content p {
   margin: 20px auto;
   font-weight: 100;
@@ -206,17 +210,21 @@ button:hover {
   border: none;
 }
 
+/* General styling for the timetable */
 table.timetable {
   width: 100%;
   border-collapse: collapse;
   margin: 20px 0;
-  table-layout: fixed;
 }
-
+.tt {
+  margin-left: 10px;
+  margin-right: 10px;
+}
 table.timetable,
 table.timetable th,
 table.timetable td {
   border: 1px solid #ddd;
+  color: white;
 }
 
 table.timetable th,
@@ -224,15 +232,52 @@ table.timetable td {
   padding: 8px;
   text-align: left;
 }
-
-table.timetable th {
-  background-color: #f2f2f2;
-}
-
-table.timetable tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
 table.timetable tr:hover {
   background-color: #ddd;
+}
+table.timetable tr:hover td {
+  color: black;
+}
+table.timetable tr:hover th {
+  color: black;
+}
+/* Scrollable container */
+#timetableContainer {
+  overflow-x: auto;
+  margin: 0 auto;
+}
+
+/* Responsive table for smaller screens */
+@media (max-width: 600px) {
+  table.timetable thead {
+    display: none;
+  }
+
+  table.timetable,
+  table.timetable tbody,
+  table.timetable tr,
+  table.timetable td {
+    display: block;
+    width: 100%;
+  }
+
+  table.timetable tr {
+    margin-bottom: 15px;
+  }
+
+  table.timetable td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  table.timetable td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-weight: bold;
+    text-align: left;
+  }
 }
